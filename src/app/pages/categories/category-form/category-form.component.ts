@@ -22,12 +22,12 @@ export interface CategoryFormData {
   templateUrl: './category-form.component.html',
   styles: [
     `
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        min-width: 300px;
-      }
+      form 
+        display: flex
+        flex-direction: column
+        gap: 5px
+        min-width: 300px
+      
     `,
   ],
   standalone: true,

@@ -14,7 +14,7 @@ import { fadeIn } from '@app/animations/fadeIn.animation';
   animations: [fadeIn],
 })
 export class EditUserComponent {
-  userId = this.route.snapshot.params.id;
+  userId = this.route.snapshot.params['id'];
   user$ = this.users.one(this.userId);
 
   constructor(

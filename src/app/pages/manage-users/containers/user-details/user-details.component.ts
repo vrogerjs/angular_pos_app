@@ -10,7 +10,7 @@ import { fadeIn } from '@app/animations/fadeIn.animation';
   animations: [fadeIn],
 })
 export class UserDetailsComponent {
-  user$ = this.users.one(this.route.snapshot.params.id);
+  user$ = this.users.one(this.route.snapshot.params['id']);
 
   constructor(private users: UsersService, private route: ActivatedRoute) {}
 }

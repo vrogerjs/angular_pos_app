@@ -5,7 +5,7 @@ import { RoleGuard } from '@core/guards/role.guard';
 export const routes: Routes = [
   {
     path: '',
-    // canActivate: [NonAuthGuard],
+   //canActivate: [NonAuthGuard],
     children: [
       {
         path: '',
@@ -14,16 +14,13 @@ export const routes: Routes = [
       },
       {
         path: 'auth',
-        loadChildren: () =>
-          import('./pages/auth/auth.routes').then(m => m.routes),
+        loadChildren: () =>import('./pages/auth/auth.routes').then(m => m.routes),
       },
     ],
   },
   {
     path: '',
-    loadComponent: async () =>
-      (await import('./layout/main-layout/main-layout.component'))
-        .MainLayoutComponent,
+    loadComponent: async () =>(await import('./layout/main-layout/main-layout.component')).MainLayoutComponent,
     canActivate: [AuthGuard],
     children: [
       {
@@ -35,17 +32,13 @@ export const routes: Routes = [
         path: 'products',
         canActivate: [RoleGuard],
         data: {},
-        loadChildren: () =>
-          import('./pages/products/products.module').then(
-            m => m.ProductsModule
-          ),
+        loadChildren: () =>import('./pages/products/products.module').then(m => m.ProductsModule),
       },
       {
         path: 'manage-users',
         canActivate: [RoleGuard],
         loadChildren: () =>
-          import('./pages/manage-users/manage-users.module').then(
-            m => m.ManageUsersModule
+          import('./pages/manage-users/manage-users.module').then(m => m.ManageUsersModule
           ),
       },
       {

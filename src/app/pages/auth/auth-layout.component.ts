@@ -10,13 +10,13 @@ import { Component } from '@angular/core';
   `,
   styles: [
     `
-      .auth-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        background-image: linear-gradient(135deg, #97abff 10%, #123597 100%);
-      }
+      .auth-container 
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 100%
+        background-image: linear-gradient(135deg, #97abff 10%, #123597 100%)
+      
     `,
   ],
   standalone: true,

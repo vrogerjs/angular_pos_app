@@ -1,61 +1,29 @@
-# Point of Sale - [Angular](https://angular.io)
+# AngularPos
 
-## Features
-
-- User management
-  - Roles (Manager, Economist, User)
-  - Login
-  - Register
-  - Settings
-  - Profile
-- Products management
-  - Products CRUD
-  - Product categories CRUD
-- Statistics dashboard
-  - Daily sales
-  - Invoices stats
-  - Most sold products
-  - Sales by category
-  - Products below minimum stock
-- Invoice management
-  - Invoice CRUD
-  - Invoce printing
-- Shifts management
-- Supplies management
-
-## App architecture
-
-- Every features lives in it's own module that is lazy loaded
-- We make use of smart-dumb component architecture
-- State lives in services with BehaviorSubjects
-- App uses [Angular Material components](https://material.angular.io)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
 
-Run `ng serve` for a dev server.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Navigate to `http://localhost:4200/`.
+## Code scaffolding
 
-The app will automatically reload if you change any of the source files.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Backend Repo
+## Build
 
-Find the backend code here: [Point of sale Laravel API](https://github.com/eneajaho/point-of-sale-laravel).
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Screenshots
+## Running unit tests
 
-![Screenshot4](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(4).jpeg>)
-![Screenshot7](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(7).jpeg>)
-![Screenshot1](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(1).jpeg>)
-![Screenshot5](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(5).jpeg>)
-![Screenshot15](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(15).jpeg>)
-![Screenshot6](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(6).jpeg>)
-![Screenshot8](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(8).jpeg>)
-![Screenshot16](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(16).png>)
-![Screenshot9](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(9).jpeg>)
-![Screenshot2](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(2).jpeg>)
-![Screenshot10](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(10).jpeg>)
-![Screenshot11](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(11).jpeg>)
-![Screenshot12](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(12).jpeg>)
-![Screenshot14](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(14).jpeg>)
-![Screenshot13](<https://raw.githubusercontent.com/eneajaho/point-of-sale-angular/master/screenshots/screenshot%20(13).jpeg>)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+ng extract-i18n --output-path src/locale

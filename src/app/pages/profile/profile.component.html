@@ -94,7 +94,7 @@
                 matInput
                 formControlName="confirmPassword" />
             </mat-form-field>
-            <mat-error *ngIf="changePasswordForm?.errors?.notSame"
+            <mat-error *ngIf="changePasswordForm?.errors?.['notSame']"
               >Passwords does not match.</mat-error
             >
 

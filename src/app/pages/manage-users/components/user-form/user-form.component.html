@@ -19,16 +19,16 @@
     <!--      </button>-->
     <!--    </mat-form-field>-->
 
-    <mat-error *ngIf="password?.errors?.hasNumber">
+    <mat-error *ngIf="password?.errors!['hasNumber']">
       Password should contain at least one number.
     </mat-error>
-    <mat-error *ngIf="password?.errors?.hasCapitalCase">
+    <mat-error *ngIf="password?.errors!['hasCapitalCase']">
       Password should contain at least one capital case.
     </mat-error>
-    <mat-error *ngIf="password?.errors?.hasSpecialCharacters">
+    <mat-error *ngIf="password?.errors!['hasSpecialCharacters']">
       Password should contain at least one special character.
     </mat-error>
-    <mat-error *ngIf="password?.errors?.minlength">
+    <mat-error *ngIf="password?.errors!['minlength']">
       Password should contain at least 8 characters.
     </mat-error>
 

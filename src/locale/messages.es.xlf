@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="122689282269604613" datatype="html">
+        <source>Sales Today</source>
+        <target>Ventas Hoy</target>
+      </trans-unit>
+      <trans-unit id="2363158409383485440" datatype="html">
+        <source>Invoices</source>
+        <target>Facturas</target>
+      </trans-unit>
+            <trans-unit id="3644157103052413424" datatype="html">
+        <source>Most sold products</source>
+        <target>Productos mas vendidos</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

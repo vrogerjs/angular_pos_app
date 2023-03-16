@@ -16,11 +16,11 @@ import { slideInAnimation } from '@app/layout/animations';
   `,
   styles: [
     `
-      @media print {
-        .navbar {
-          display: none;
-        }
-      }
+      @media print 
+        .navbar 
+          display: none
+        
+      
     `,
   ],
   standalone: true,
@@ -30,7 +30,7 @@ import { slideInAnimation } from '@app/layout/animations';
 export class MainLayoutComponent {
   prepareRoute(outlet: RouterOutlet): Data {
     return (
-      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation']
     );
   }
 }
