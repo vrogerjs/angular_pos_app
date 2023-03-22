@@ -13,5 +13,5 @@ export class InvoiceTableComponent {
   @Output() paginated = new EventEmitter<PageEvent>();
   @Output() invoiceClicked = new EventEmitter<Invoice>();
 
-  displayedColumns = ['id', 'user', 'total', 'paid', 'time'];
+  displayedColumns = ['id', 'user','code', 'client', 'details', 'total', 'paid', 'time'];
 }

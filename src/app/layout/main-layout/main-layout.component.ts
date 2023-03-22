@@ -7,7 +7,7 @@ import { slideInAnimation } from '@app/layout/animations';
 @Component({
   selector: 'app-main-layout',
   template: `
-    <app-navbar class="navbar"></app-navbar>
+    <app-navbar class="navbar p-0"></app-navbar>
     <div class="container-fluid py-4">
       <div [@routeAnimations]="prepareRoute(outlet)">
         <router-outlet #outlet="outlet"></router-outlet>
@@ -16,11 +16,9 @@ import { slideInAnimation } from '@app/layout/animations';
   `,
   styles: [
     `
-      @media print 
-        .navbar 
+      @media print
+        .navbar
           display: none
-        
-      
     `,
   ],
   standalone: true,

@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="handleSubmit()">
   <div class="d-flex flex-column">
     <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
+      <mat-label i18n>Name</mat-label>
       <input formControlName="name" matInput placeholder="John Doe" />
     </mat-form-field>
 
@@ -33,7 +33,7 @@
     </mat-error>
 
     <mat-form-field appearance="outline">
-      <mat-label>Shift</mat-label>
+      <mat-label i18n>Shift</mat-label>
       <mat-select formControlName="shift">
         <mat-option *ngFor="let shift of shifts$ | async" [value]="shift.id">
           {{ shift.name }}
@@ -42,7 +42,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Role</mat-label>
+      <mat-label i18n>Role</mat-label>
       <mat-select formControlName="role">
         <mat-option *ngFor="let role of roles" [value]="role.value">
           {{ role.label }}
@@ -57,7 +57,7 @@
       mat-raised-button
       color="primary">
       <mat-icon class="mr-2">save</mat-icon>
-      <span>Save</span>
+      <span i18n>Save</span>
     </button>
   </div>
 </form>

@@ -6,12 +6,12 @@
     </ng-container>
 
     <ng-container matColumnDef="name">
-      <th *matHeaderCellDef mat-header-cell>Name</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Name</th>
       <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
     </ng-container>
 
     <ng-container matColumnDef="icon">
-      <th *matHeaderCellDef mat-header-cell>Icon</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Icon</th>
       <td *matCellDef="let element" mat-cell>
         <mat-icon [style.color]="element.color">{{ element.icon }}</mat-icon>
       </td>

@@ -4,43 +4,43 @@ import { Injectable } from '@angular/core';
 export class LayoutService {
   navItems = [
     {
-      label: 'Dashboard',
+      label: $localize`Dashboard`,
       path: 'dashboard',
       icon: 'dashboard',
       roles: ['admin', 'manager'],
     },
     {
-      label: 'Invoices',
+      label: $localize`Invoices`,
       path: 'invoice',
       icon: 'receipt',
       roles: ['admin', 'manager', 'user'],
     },
     {
-      label: 'Products',
+      label: $localize`Products`,
       path: 'products',
       icon: 'category',
       roles: ['admin', 'manager'],
     },
     {
-      label: 'Supplies',
+      label: $localize`Supplies`,
       path: 'supplies',
       icon: 'inventory_2',
       roles: ['admin', 'manager'],
     },
     {
-      label: 'Users',
+      label: $localize`Users`,
       path: 'manage-users',
       icon: 'people',
       roles: ['admin'],
     },
     {
-      label: 'Shifts',
+      label: $localize`Shifts`,
       path: 'shifts',
       icon: 'schedule',
       roles: ['admin', 'manager'],
     },
     {
-      label: 'Categories',
+      label: $localize`Categories`,
       path: 'categories',
       icon: 'category',
       roles: ['admin', 'manager'],

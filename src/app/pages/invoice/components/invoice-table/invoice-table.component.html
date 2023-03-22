@@ -3,24 +3,39 @@
     <mat-text-column headerText="No." name="id"></mat-text-column>
 
     <ng-container matColumnDef="user">
-      <th *matHeaderCellDef mat-header-cell>User</th>
+      <th *matHeaderCellDef mat-header-cell i18n>User</th>
       <td *matCellDef="let element" mat-cell>{{ element.user.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="code">
+      <th *matHeaderCellDef mat-header-cell i18n>Código</th>
+      <td *matCellDef="let element" mat-cell>{{ element.code }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="client">
+      <th *matHeaderCellDef mat-header-cell i18n>Cliente</th>
+      <td *matCellDef="let element" mat-cell>{{ element.client }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="details">
+      <th *matHeaderCellDef mat-header-cell i18n>Detalles</th>
+      <td *matCellDef="let element" mat-cell>{{ element.details }}</td>
     </ng-container>
 
     <ng-container matColumnDef="total">
       <th *matHeaderCellDef mat-header-cell>Total</th>
-      <td *matCellDef="let element" mat-cell>{{ element.total }} Lekë</td>
+      <td *matCellDef="let element" mat-cell>{{ element.total }} Soles</td>
     </ng-container>
 
     <ng-container matColumnDef="paid">
-      <th *matHeaderCellDef mat-header-cell>Is paid</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Is paid">Is paid</th>
       <td *matCellDef="let element" mat-cell>
         {{ element.is_paid === 1 ? 'Yes' : 'No' }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="time">
-      <th *matHeaderCellDef mat-header-cell>Last update</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Last update">Last update</th>
       <td *matCellDef="let element" mat-cell>
         {{ element.updated_at | date: 'medium':'+0000' }}
       </td>

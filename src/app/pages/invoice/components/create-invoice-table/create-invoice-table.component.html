@@ -1,42 +1,74 @@
 <div class="rounded-table mat-elevation-z1">
-  <table class="mat-table full-width" [dataSource]="invoiceProducts" mat-table>
+  <table
+    class="mat-table full-width table table-striped table-hover table-bordered border-secondary"
+    [dataSource]="invoiceProducts"
+    mat-table
+  >
     <ng-container matColumnDef="name">
-      <th *matHeaderCellDef mat-header-cell>Name</th>
-      <td *matCellDef="let element" mat-cell>{{ element.product.name }}</td>
+      <th
+        *matHeaderCellDef
+        mat-header-cell
+        i18n="Name"
+        style="vertical-align: middle; text-align: center"
+      >
+        Name
+      </th>
+      <td *matCellDef="let element" mat-cell style="vertical-align: middle;">{{ element.product.name }}</td>
       <td *matFooterCellDef mat-footer-cell></td>
     </ng-container>
 
     <ng-container matColumnDef="price">
-      <th *matHeaderCellDef mat-header-cell>Price</th>
-      <td *matCellDef="let element" mat-cell>
-        {{ element.product.price }} Lekë
+      <th
+        *matHeaderCellDef
+        mat-header-cell
+        i18n
+        style="vertical-align: middle; text-align: center"
+      >
+        Price
+      </th>
+      <td *matCellDef="let element" mat-cell style="vertical-align: middle;">
+        {{ element.product.price }} Soles
       </td>
       <td *matFooterCellDef mat-footer-cell></td>
     </ng-container>
 
     <ng-container matColumnDef="count">
-      <th *matHeaderCellDef mat-header-cell>Count</th>
+      <th
+        *matHeaderCellDef
+        mat-header-cell
+        i18n
+        style="vertical-align: middle; text-align: center"
+      >
+        Count
+      </th>
       <td *matCellDef="let element" mat-cell style="min-width: 80px">
         <div
           class="d-flex align-items-center"
-          style="justify-content: space-evenly">
+          style="justify-content: space-evenly"
+        >
           <button
             class="count-btn remove"
-            (click)="decrease.emit(element.product.id)">
+            (click)="decrease.emit(element.product.id)"
+          >
+            -
           </button>
-          <mat-form-field appearance="outline" style="width: 250px">
+          <mat-form-field appearance="outline" style="width: 100px">
             <input
-            [value]="element.count"
+              matInput
+              placeholder="#"
+              [value]="element.count"
               (change)="
                 edit.emit({ target: $event.target, id: element.product.id })
               "
               type="text"
-              matInput />
+              matInput
+            />
           </mat-form-field>
           <button
             class="count-btn add"
             [disabled]="element.product.stock.quantity <= element.count"
-            (click)="increase.emit(element.product.id)">
+            (click)="increase.emit(element.product.id)"
+          >
             +
           </button>
         </div>
@@ -45,21 +77,34 @@
     </ng-container>
 
     <ng-container matColumnDef="total">
-      <th *matHeaderCellDef mat-header-cell>Total</th>
-      <td *matCellDef="let element" mat-cell>
-        {{ element.count * element.product.price }} Lekë
+      <th
+        *matHeaderCellDef
+        mat-header-cell
+        style="vertical-align: middle; text-align: center"
+      >
+        Total
+      </th>
+      <td *matCellDef="let element" mat-cell style="vertical-align: middle;">
+        {{ element.count * element.product.price }} Soles
       </td>
-      <td *matFooterCellDef mat-footer-cell>{{ allTotal() }} Lekë</td>
+      <td *matFooterCellDef mat-footer-cell>{{ allTotal() }} Soles</td>
     </ng-container>
 
     <ng-container matColumnDef="remove">
-      <th *matHeaderCellDef mat-header-cell>Remove</th>
-      <td *matCellDef="let element" mat-cell>
+      <th
+        *matHeaderCellDef
+        mat-header-cell
+        i18n
+        style="vertical-align: middle; text-align: center"
+      >Remove
+      </th>
+      <td *matCellDef="let element" mat-cell style="vertical-align: middle;">
         <button
           (click)="removed.emit(element.product.id)"
-          mat-stroked-button
-          color="warn">
-          Remove
+          mat-raised-button
+          color="warn"
+          i18n
+        >Remove
         </button>
       </td>
       <td *matFooterCellDef mat-footer-cell></td>

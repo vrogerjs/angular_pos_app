@@ -4,11 +4,11 @@
       <h1 class="m-0">Users</h1>
       <button class="mx-3" routerLink="add" mat-button color="primary">
         <mat-icon class="mr-2">person_add</mat-icon>
-        <span>Add user</span>
+        <span i18n>Add User</span>
       </button>
     </div>
     <mat-form-field appearance="outline">
-      <mat-label>Search</mat-label>
+      <mat-label i18n>Search</mat-label>
       <input
         (keydown)="filterUsers($any($event.target).value)"
         matInput

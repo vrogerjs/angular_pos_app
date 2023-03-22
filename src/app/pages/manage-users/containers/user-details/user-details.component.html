@@ -6,14 +6,14 @@
           <button class="mr-2" routerLink="/manage-users" mat-icon-button>
             <mat-icon>arrow_back</mat-icon>
           </button>
-          <h1 class="mb-0">User details</h1>
+          <h1 class="mb-0" i18n>User details</h1>
         </div>
         <button
           [routerLink]="['/manage-users/edit', user.id]"
           mat-button
           color="primary">
           <mat-icon class="mr-2">manage_accounts</mat-icon>
-          <span>Edit user</span>
+          <span i18n>Edit User</span>
         </button>
       </div>
 

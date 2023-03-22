@@ -25,12 +25,16 @@ export interface InvoiceProduct {
   product: ProductDetails;
 }
 
+
 export interface Invoice {
   id: number;
   created_at: Date;
   updated_at: Date;
   total: number;
   is_paid: number;
+  code?:string,
+  client?:string,
+  details:string,
   user_id: number;
   shift_id: number;
   user: User;

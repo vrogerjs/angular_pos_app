@@ -8,21 +8,24 @@
 
     <div class="col-12 my-2" *ngIf="vm.invoiceDetails">
       <div class="invoice-details">
-        <span>User: {{ vm.invoiceDetails.user.name }}</span>
-        <span>Paid: {{ vm.invoiceDetails.is_paid === 1 ? 'Yes' : 'No' }}</span>
-        <span
-          >Time:
-          {{ vm.invoiceDetails.created_at | date: 'medium':'+0000' }}</span
+        <span i18n="User">User: {{ vm.invoiceDetails.user.name }}</span>
+        <span i18n="Paid"
+          >Paid: {{ vm.invoiceDetails.is_paid === 1 ? "Yes" : "No" }}</span
         >
-        <span>Total: {{ vm.invoiceDetails.total }} Lekë</span>
+        <span i18n="Time"
+          >Time:
+          {{ vm.invoiceDetails.created_at | date : "medium" : "+0000" }}</span
+        >
+        <span>Total: {{ vm.invoiceDetails.total }} Soles</span>
       </div>
     </div>
 
     <div class="col-12 col-md-2" *ngIf="!vm.loading">
-      <h2>Categories</h2>
+      <h2 i18n="Categories">Categories</h2>
       <div
         class="categories-container"
-        *ngIf="categories$ | async as categories; else loading">
+        *ngIf="categories$ | async as categories; else loading"
+      >
         <button
           class="category-item"
           *ngFor="let category of categories"
@@ -30,7 +33,8 @@
           [style.color]="category.color"
           (click)="setActiveCategory(category.id)"
           mat-button
-          type="button">
+          type="button"
+        >
           <mat-icon class="mr-2">{{ category.icon }}</mat-icon>
           <span>{{ category.name }}</span>
         </button>
@@ -42,33 +46,36 @@
       </ng-template>
     </div>
     <div class="col-12 col-md-4" *ngIf="!vm.loading">
-      <h2>Products</h2>
+      <h2 i18n="Products">Products</h2>
       <mat-form-field appearance="outline" style="width: 250px">
-        <mat-label>Search products</mat-label>
+        <mat-label i18n="Search products">Search products</mat-label>
         <input (change)="handleProductSearch($event)" type="text" matInput />
       </mat-form-field>
 
       <div class="products-container container-fluid">
         <div
           class="row justify-content-start align-items-center"
-          *ngIf="products$ | async as productsState">
+          *ngIf="products$ | async as productsState"
+        >
           <div
             class="col-12 col-md-6 mb-2 px-0"
-            *ngFor="let product of productsState.data">
+            *ngFor="let product of productsState.data"
+          >
             <div
               class="product-item"
               @fadeIn
               [class.empty]="
-                (product | currentStockQuantity: vm.invoiceProducts) === 0
+                (product | currentStockQuantity : vm.invoiceProducts) === 0
               "
-              (click)="addItem(product, vm.invoiceProducts)">
+              (click)="addItem(product, vm.invoiceProducts)"
+            >
               <b>{{ product.name }}</b>
               <div class="details">
                 <span>
-                  {{ product | currentStockQuantity: vm.invoiceProducts }}
+                  {{ product | currentStockQuantity : vm.invoiceProducts }}
                   {{ product.stock.type }}
                 </span>
-                <span>{{ product.price }} Lek</span>
+                <span i18n="Lek">{{ product.price }} Lek</span>
               </div>
             </div>
           </div>
@@ -76,51 +83,89 @@
       </div>
     </div>
     <div class="col-12 col-md-6" *ngIf="!vm.loading">
-      <h2>Invoice</h2>
-
+      <h2 i18n="Invoice">Invoice</h2>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <mat-form-field class="example-full-width">
+            <mat-label>Código</mat-label>
+            <input
+              matInput
+              placeholder="Ingrese el código"
+              [formControl]="code"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6">
+          <mat-form-field class="example-full-width">
+            <mat-label>Cliente</mat-label>
+            <input
+              matInput
+              placeholder="Ingrese los apellidos y nombres"
+              [formControl]="client"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-12" *ngIf="vm.invoiceDetails">
+        {{vm.invoiceDetails.details}}
+        <mat-form-field class="example-full-width" >
+          <mat-label>Detalles</mat-label>
+          <textarea
+            matInput
+            placeholder="Ingrese los detalles"
+            [value]="vm.invoiceDetails.details"
+            (keyup)="onChange($event)"
+          ></textarea>
+        </mat-form-field>
+      </div>
       <app-create-invoice-table
         [invoiceProducts]="vm.invoiceProducts"
         (removed)="removeItem($event)"
         (edit)="editItemQuantity($event)"
         (increase)="increaseItemQuantity($event)"
-        (decrease)="decreaseItemQuantity($event)">
+        (decrease)="decreaseItemQuantity($event)"
+      >
       </app-create-invoice-table>
-
-      <br />
+      <br>
       <div
         class="d-flex justify-content-between"
-        *ngIf="vm.invoiceProducts.length > 0">
+        *ngIf="vm.invoiceProducts.length > 0"
+      >
         <button
           *ngIf="vm.invoiceDetails === null"
           (click)="createInvoice()"
           mat-flat-button
-          color="primary">
+          color="primary"
+        >
           <mat-icon class="mr-2">shopping_cart</mat-icon>
-          <span>Create invoice</span>
+          <span i18n="Create invoice">Create invoice</span>
         </button>
         <button
           *ngIf="vm.invoiceDetails !== null && vm.invoiceDetails?.is_paid === 0"
           (click)="updateInvoice()"
           mat-flat-button
-          color="primary">
+          color="primary"
+        >
           <mat-icon class="mr-2">edit</mat-icon>
-          <span>Update invoice</span>
+          <span i18n="Update invoice">Update invoice</span>
         </button>
         <button
           *ngIf="vm.invoiceDetails?.is_paid === 0"
           (click)="payInvoice()"
           mat-flat-button
-          color="accent">
+          color="accent"
+        >
           <mat-icon class="mr-2">point_of_sale</mat-icon>
-          <span>Pay now</span>
+          <span i18n="Pay now">Pay now</span>
         </button>
         <button
           *ngIf="vm.invoiceDetails !== null"
           (click)="printInvoice()"
           mat-flat-button
-          color="primary">
-          <mat-icon class="mr-2">print</mat-icon>
-          <span>Print invoice</span>
+          color="primary"
+        >
+          <mat-icon class="mr-2" i18n="print">print</mat-icon>
+          <span i18n="Print invoice">Print invoice</span>
         </button>
       </div>
     </div>
@@ -131,6 +176,7 @@
   <div class="invoice-format" *ngIf="vm.invoiceDetails !== null">
     <app-invoice-format
       class="invoice-format"
-      [invoiceDetails]="vm.invoiceDetails"></app-invoice-format>
+      [invoiceDetails]="vm.invoiceDetails"
+    ></app-invoice-format>
   </div>
 </div>

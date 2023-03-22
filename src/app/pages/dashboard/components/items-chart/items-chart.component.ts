@@ -12,7 +12,10 @@ import {
   styleUrls: ['./items-chart.component.scss'],
 })
 export class ItemsChartComponent implements AfterContentChecked {
-  @ViewChild('chartContainer') chartContainer?: ElementRef;
+
+  @ViewChild('chartContainer')
+  chartContainer?: ElementRef;
+
   offsetWidthContainer = 200;
 
   @Input() data: { id: number; name: string; value: number }[] = [];

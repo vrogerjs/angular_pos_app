@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Category</mat-label>
+            <mat-label i18n="Category">Category</mat-label>
             <mat-select formControlName="categoryId">
               <mat-option></mat-option>
               <mat-option
@@ -18,7 +18,7 @@
 
         <div class="col">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Choose date</mat-label>
+            <mat-label i18n="Choose date">Choose date</mat-label>
             <mat-date-range-input [rangePicker]="picker">
               <input
                 matStartDate
@@ -35,28 +35,22 @@
             <mat-date-range-picker #picker></mat-date-range-picker>
 
             <mat-error
-              *ngIf="form.get('startDate')?.hasError('matStartDateInvalid')">
-              Invalid start date
-            </mat-error>
+              *ngIf="form.get('startDate')?.hasError('matStartDateInvalid')" i18n="Invalid start date">Invalid start date</mat-error>
             <mat-error
-              *ngIf="form.get('endDate')?.hasError('matEndDateInvalid')">
-              Invalid end date
-            </mat-error>
+              *ngIf="form.get('endDate')?.hasError('matEndDateInvalid')" i18n="Invalid end date">Invalid end date</mat-error>
           </mat-form-field>
         </div>
 
         <div class="col">
           <button class="mr-2" mat-raised-button color="primary" type="submit">
             <mat-icon class="mr-2">search</mat-icon>
-            <span>Search</span>
+            <span i18n="Search">Search</span>
           </button>
           <button
             (click)="form.reset(); onSubmit()"
             mat-button
             color="warn"
-            type="button">
-            Reset
-          </button>
+            type="button" i18n="Reset">Reset</button>
         </div>
       </div>
     </mat-card-content>

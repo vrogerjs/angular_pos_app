@@ -4,3 +4,4 @@ export interface WorkingTime {
   end: string;
   dayOff: boolean;
 }
+

@@ -10,10 +10,380 @@
         <source>Invoices</source>
         <target>Facturas</target>
       </trans-unit>
-            <trans-unit id="3644157103052413424" datatype="html">
+      <trans-unit id="3644157103052413424" datatype="html">
         <source>Most sold products</source>
         <target>Productos mas vendidos</target>
       </trans-unit>
+      <trans-unit id="6707361102856436710" datatype="html">
+        <source>Products</source>
+        <target>Productos</target>
+      </trans-unit>
+      <trans-unit id="4555457172864212828" datatype="html">
+        <source>Users</source>
+        <target>Usuarios</target>
+      </trans-unit>
+      <trans-unit id="3768927257183755959" datatype="html">
+        <source>Save</source>
+        <target>Guardar</target>
+      </trans-unit>
+      <trans-unit id="3078437571951734777" datatype="html">
+        <source>Supplies</source>
+        <target>Suministros</target>
+      </trans-unit>
+      <trans-unit id="6570363013146073520" datatype="html">
+        <source>Dashboard</source>
+        <target>Panel</target>
+      </trans-unit>
+      <trans-unit id="1335554401937230706" datatype="html">
+        <source>Shifts</source>
+        <target>Turnos</target>
+      </trans-unit>
+      <trans-unit id="1335554401937230706" datatype="html">
+        <source>Refresh</source>
+        <target>Actualizar</target>
+      </trans-unit>
+      <trans-unit id="4580988005648117665" datatype="html">
+        <source>Search</source>
+        <target>Buscar</target>
+      </trans-unit>
+      <trans-unit id="1902100407096396858" datatype="html">
+        <source>Categories</source>
+        <target>Categorias</target>
+      </trans-unit>
+      <trans-unit id="4372370406772590537" datatype="html">
+        <source>Time</source>
+        <target>Tiempo</target>
+      </trans-unit>
+      <trans-unit id="5068797278000434009" datatype="html">
+        <source>Paid</source>
+        <target>Pagar</target>
+      </trans-unit>
+      <trans-unit id="2911488257905649436" datatype="html">
+        <source>Lek</source>
+        <target>Soles</target>
+      </trans-unit>
+      <trans-unit id="3388326130942494952" datatype="html">
+        <source>print</source>
+        <target>Imprimir</target>
+      </trans-unit>
+      <trans-unit id="3833335631928489785" datatype="html">
+        <source>Create Invoice</source>
+        <target>Crear Factura</target>
+      </trans-unit>
+      <trans-unit id="3955290081982529134" datatype="html">
+        <source>Point of sale</source>
+        <target>Punto de Venta</target>
+      </trans-unit>
+      <trans-unit id="4821529109023135834" datatype="html">
+        <source>Print invoce</source>
+        <target>Imprimir factura</target>
+      </trans-unit>
+      <trans-unit id="4913852525793624577" datatype="html">
+        <source>Shopping cart</source>
+        <target>Carrito de compra</target>
+      </trans-unit>
+      <trans-unit id="5220129487922879731" datatype="html">
+        <source>Update invoce</source>
+        <target>Actualizar factura</target>
+      </trans-unit>
+      <trans-unit id="7743479397215344247" datatype="html">
+        <source>Search products</source>
+        <target>Buscar productos</target>
+      </trans-unit>
+      <trans-unit id="8357125585432328649" datatype="html">
+        <source>Pay now</source>
+        <target>Pagar ahora</target>
+      </trans-unit>
+      <trans-unit id="5731972491580424912" datatype="html">
+        <source>Invoice</source>
+        <target>Factura</target>
+      </trans-unit>
+      <trans-unit id="2392488717875840729" datatype="html">
+        <source>User</source>
+        <target>Usuario</target>
+      </trans-unit>
+      <trans-unit id="4814285799071780083" datatype="html">
+        <source>Remove</source>
+        <target>Eliminar</target>
+      </trans-unit>
+      <trans-unit id="8177873832400820695" datatype="html">
+        <source>Count</source>
+        <target>Cantidad</target>
+      </trans-unit>
+      <trans-unit id="8894377483833272091" datatype="html">
+        <source>Price</source>
+        <target>Precio</target>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="684770328609313469" datatype="html">
+        <source>Invalid start date</source>
+        <target>Fecha de inicio invalida</target>
+      </trans-unit>
+      <trans-unit id="584288095769834263" datatype="html">
+        <source>Invalid start date</source>
+        <target>Fecha de inicio invalida</target>
+      </trans-unit>
+      <trans-unit id="1028701000606529578" datatype="html">
+        <source>Choose date</source>
+        <target>Seleccione la fecha</target>
+      </trans-unit>
+      <trans-unit id="2428777988177986559" datatype="html">
+        <source>Is paid</source>
+        <target>Está pagado</target>
+      </trans-unit>
+      <trans-unit id="2807800733729323332" datatype="html">
+        <source>Yes</source>
+        <target>Si</target>
+      </trans-unit>
+      <trans-unit id="4916476257362052924" datatype="html">
+        <source>Invalid end date</source>
+        <target>Fecha final invalida</target>
+      </trans-unit>
+      <trans-unit id="2768970468673295844" datatype="html">
+        <source>Invalid end date</source>
+        <target>Fecha final invalida</target>
+      </trans-unit>
+      <trans-unit id="7808756054397155068" datatype="html">
+        <source>Reset</source>
+        <target>Cancelar</target>
+      </trans-unit>
+      <trans-unit id="5478121364779850827" datatype="html">
+        <source>Reset</source>
+        <target>Cancelar</target>
+      </trans-unit>
+      <trans-unit id="5489579894406162327" datatype="html">
+        <source>FATURË</source>
+        <target>Factura</target>
+      </trans-unit>
+      <trans-unit id="1326888570166452682" datatype="html">
+        <source>TOTALI LEK</source>
+        <target>Total Soles</target>
+      </trans-unit>
+      <trans-unit id="6506736400830943261" datatype="html">
+        <source> ALL</source>
+        <target>Total</target>
+      </trans-unit>
+      <trans-unit id="8786639252063509488" datatype="html">
+        <source>Fature nga AmigPos</source>
+        <target>Fature nga AmigPos</target>
+      </trans-unit>
+      <trans-unit id="8670565817959078431" datatype="html">
+        <source>Last update</source>
+        <target>Últila actualización</target>
+      </trans-unit>
+      <trans-unit id="1059784693423848532" datatype="html">
+        <source>add</source>
+        <target>agregar</target>
+      </trans-unit>
+      <trans-unit id="4198696396299767254" datatype="html">
+        <source>No data found</source>
+        <target>No se encontro los datos.</target>
+      </trans-unit>
+      <trans-unit id="1806667489382256324" datatype="html">
+        <source>Category</source>
+        <target>Categoría</target>
+      </trans-unit>
+      <trans-unit id="2536420561286022087" datatype="html">
+        <source>Has low stock</source>
+        <target>Bajo stock</target>
+      </trans-unit>
+      <trans-unit id="3011112932753861347" datatype="html">
+        <source>Barcode</source>
+        <target>Codigo de Barras</target>
+      </trans-unit>
+      <trans-unit id="3800326155195149498" datatype="html">
+        <source>False</source>
+        <target>Falso</target>
+      </trans-unit>
+      <trans-unit id="4465085913683915434" datatype="html">
+        <source>True</source>
+        <target>Verdadero</target>
+      </trans-unit>
+      <trans-unit id="9144388092572424640" datatype="html">
+        <source>Reset form</source>
+        <target>Cancelar</target>
+      </trans-unit>
+      <trans-unit id="9170960010247373360" datatype="html">
+        <source>Filter products</source>
+        <target>Filtrar Productos</target>
+      </trans-unit>
+      <trans-unit id="4523730496364232341" datatype="html">
+        <source>Stock Type</source>
+        <target>Tipo de Stock</target>
+      </trans-unit>
+      <trans-unit id="6209576392302065310" datatype="html">
+        <source>Optimal stock</source>
+        <target>Stock óptimo</target>
+      </trans-unit>
+      <trans-unit id="3356603511793337044" datatype="html">
+        <source>Optimal stock</source>
+        <target>Stock óptimo</target>
+      </trans-unit>
+      <trans-unit id="2447410334552520706" datatype="html">
+        <source>Low stock</source>
+        <target>Bajo stock</target>
+      </trans-unit>
+      <trans-unit id="8090504693431802796" datatype="html">
+        <source>Low stock</source>
+        <target>Bajo stock</target>
+      </trans-unit>
+      <trans-unit id="8640257554156088424" datatype="html">
+        <source>save</source>
+        <target>Guardar</target>
+      </trans-unit>
+      <trans-unit id="8916463584035714027" datatype="html">
+        <source>Save product</source>
+        <target>Guardar producto</target>
+      </trans-unit>
+      <trans-unit id="9099699072484162110" datatype="html">
+        <source>Supply</source>
+        <target>Suministrar</target>
+      </trans-unit>
+      <trans-unit id="3822257693851427486" datatype="html">
+        <source>Add product</source>
+        <target>Añadir producto</target>
+      </trans-unit>
+      <trans-unit id="5954430895394361048" datatype="html">
+        <source>Edit product</source>
+        <target>Editar producto</target>
+      </trans-unit>
+      <trans-unit id="1070574421256058549" datatype="html">
+        <source>Product details</source>
+        <target>Detalles del producto</target>
+      </trans-unit>
+      <trans-unit id="588284100849805066" datatype="html">
+        <source>Product name</source>
+        <target>Nombre del Producto</target>
+      </trans-unit>
+      <trans-unit id="2223066803876432938" datatype="html">
+        <source>Supply product</source>
+        <target>Suministrar producto</target>
+      </trans-unit>
+      <trans-unit id="2927371933204518303" datatype="html">
+        <source>Supply quantity</source>
+        <target>Cantidad de suministro</target>
+      </trans-unit>
+      <trans-unit id="3669448913117860646" datatype="html">
+        <source>Current stock</source>
+        <target>Stock actual</target>
+      </trans-unit>
+      <trans-unit id="5478679009056575535" datatype="html">
+        <source>Minimum stock</source>
+        <target>Stock mínimo</target>
+      </trans-unit>
+      <trans-unit id="5625149261511186536" datatype="html">
+        <source>Product category</source>
+        <target>Categoría del producto</target>
+      </trans-unit>
+      <trans-unit id="4613338085351943838" datatype="html">
+        <source>Stock</source>
+        <target>Stock</target>
+      </trans-unit>
+      <trans-unit id="808477888388679144" datatype="html">
+        <source>Made at</source>
+        <target>Hecho en</target>
+      </trans-unit>
+      <trans-unit id="972155459248237270" datatype="html">
+        <source>Before supply</source>
+        <target>Antes del suministro</target>
+      </trans-unit>
+      <trans-unit id="2485885051828830307" datatype="html">
+        <source>After supply</source>
+        <target>Despues del suministro</target>
+      </trans-unit>
+      <trans-unit id="7616770651914901276" datatype="html">
+        <source>Product</source>
+        <target>Producto</target>
+      </trans-unit>
+      <trans-unit id="4145496584631696119" datatype="html">
+        <source>Role</source>
+        <target>Rol</target>
+      </trans-unit>
+      <trans-unit id="8240571897505003751" datatype="html">
+        <source>Shift</source>
+        <target>Turno</target>
+      </trans-unit>
+      <trans-unit id="2941198503117307737" datatype="html">
+        <source>Add User</source>
+        <target>Agregar usuario</target>
+      </trans-unit>
+      <trans-unit id="1211169124143348857" datatype="html">
+        <source>Edit User</source>
+        <target>Editar usuario</target>
+      </trans-unit>
+      <trans-unit id="208417461251028549" datatype="html">
+        <source>User details</source>
+        <target>Detalles del usuario</target>
+      </trans-unit>
+      <trans-unit id="3029887440722063094" datatype="html">
+        <source>End time</source>
+        <target>Hora Fin</target>
+      </trans-unit>
+      <trans-unit id="3770761673682962465" datatype="html">
+        <source>Start time</source>
+        <target>Hora inicio</target>
+      </trans-unit>
+      <trans-unit id="1102717806459547726" datatype="html">
+        <source>Refresh</source>
+        <target>Actualizar</target>
+      </trans-unit>
+      <trans-unit id="3299419595046683018" datatype="html">
+        <source>Add shift</source>
+        <target>Agregar turno</target>
+      </trans-unit>
+      <trans-unit id="3249513483374643425" datatype="html">
+        <source>Add</source>
+        <target>Agregar</target>
+      </trans-unit>
+      <trans-unit id="7585826646011739428" datatype="html">
+        <source>Edit</source>
+        <target>Editar</target>
+      </trans-unit>
+      <trans-unit id="1349547954574351547" datatype="html">
+        <source>Add category</source>
+        <target>Añadir categoría</target>
+      </trans-unit>
+      <trans-unit id="3074987902485823708" datatype="html">
+        <source>Icon</source>
+        <target>Icono</target>
+      </trans-unit>
+      <trans-unit id="8028727917214261691" datatype="html">
+        <source>Preview</source>
+        <target>Avance</target>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>Cancel</source>
+        <target>Cancelar</target>
+      </trans-unit>
+      <trans-unit id="8418600803041641002" datatype="html">
+        <source>Product Categories</source>
+        <target>Categoria de productos</target>
+      </trans-unit>
+      <trans-unit id="7585826646011739428" datatype="html">
+        <source>Edit</source>
+        <target>Editar</target>
+      </trans-unit>
+      <trans-unit id="6633385552841725588" datatype="html">
+        <source>Products below minimum stock</source>
+        <target>Productos por debajo del stock mínimo</target>
+      </trans-unit>
+      <trans-unit id="4737310907669661281" datatype="html">
+        <source>Current Stock</source>
+        <target>Stock actual</target>
+      </trans-unit>
+      <trans-unit id="6733304618439231205" datatype="html">
+        <source>Sales by category</source>
+        <target>Ventas por categoria</target>
+      </trans-unit>
+      <trans-unit id="4625319714635730837" datatype="html">
+        <source>Minimum Stock</source>
+        <target>Stock mínimo</target>
+      </trans-unit>
+
+
     </body>
   </file>
 </xliff>

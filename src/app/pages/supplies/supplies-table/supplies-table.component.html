@@ -3,28 +3,28 @@
     <mat-text-column headerText="No." name="id"></mat-text-column>
 
     <ng-container matColumnDef="product">
-      <th *matHeaderCellDef mat-header-cell>Product</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Product">Product</th>
       <td *matCellDef="let element" mat-cell>
         <b>{{ element.product.name }}</b>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="before">
-      <th *matHeaderCellDef mat-header-cell>Before supply</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Before supply">Before supply</th>
       <td *matCellDef="let element" mat-cell>
         {{ element.before_supply }} {{ element.stock.type }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="after">
-      <th *matHeaderCellDef mat-header-cell>After supply</th>
+      <th *matHeaderCellDef mat-header-cell i18n="After supply">After supply</th>
       <td *matCellDef="let element" mat-cell>
         <b>{{ element.after_supply }} {{ element.stock.type }} </b>
       </td>
     </ng-container>
 
     <ng-container matColumnDef="time">
-      <th *matHeaderCellDef mat-header-cell>Made at</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Made at">Made at</th>
       <td *matCellDef="let element" mat-cell>
         {{ element.created_at | date: 'medium':'+0000' }}
       </td>

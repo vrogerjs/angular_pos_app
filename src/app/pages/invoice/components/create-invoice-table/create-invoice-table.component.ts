@@ -36,6 +36,7 @@ export class CreateInvoiceTableComponent {
     this.invoiceProducts.forEach(item => {
       total += item.product.price * item.count;
     });
+    console.log(this.invoiceProducts);
 
     return total;
   }

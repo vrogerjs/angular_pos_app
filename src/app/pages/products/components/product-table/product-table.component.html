@@ -6,41 +6,41 @@
     </ng-container>
 
     <ng-container matColumnDef="name">
-      <th *matHeaderCellDef mat-header-cell>Name</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Name">Name</th>
       <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
     </ng-container>
 
     <ng-container matColumnDef="price">
-      <th *matHeaderCellDef mat-header-cell>Price</th>
-      <td *matCellDef="let element" mat-cell>{{ element.price }} Lekë</td>
+      <th *matHeaderCellDef mat-header-cell i18n="Price">Price</th>
+      <td *matCellDef="let element" mat-cell>{{ element.price }} Soles</td>
     </ng-container>
 
     <ng-container matColumnDef="lowStock">
-      <th *matHeaderCellDef mat-header-cell>LowStock</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Low stock">Low Stock</th>
       <td *matCellDef="let element" mat-cell>{{ element.low_stock }}</td>
     </ng-container>
 
     <!-- OptimalStock Column -->
     <ng-container matColumnDef="optimalStock">
-      <th *matHeaderCellDef mat-header-cell>OptimalStock</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Optimal stock">Optimal Stock</th>
       <td *matCellDef="let element" mat-cell>{{ element.optimal_stock }}</td>
     </ng-container>
 
     <!-- Stock Column -->
     <ng-container matColumnDef="stock">
-      <th *matHeaderCellDef mat-header-cell>Stock</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Stock">Stock</th>
       <td *matCellDef="let element" mat-cell>{{ element?.stock?.quantity }}</td>
     </ng-container>
 
     <!-- Stock type  Column -->
     <ng-container matColumnDef="stock_type">
-      <th *matHeaderCellDef mat-header-cell>Stock type</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Stock type">Stock type</th>
       <td *matCellDef="let element" mat-cell>{{ element?.stock?.type }}</td>
     </ng-container>
 
     <!-- Barcode Column -->
     <ng-container matColumnDef="barcode">
-      <th *matHeaderCellDef mat-header-cell>Barcode</th>
+      <th *matHeaderCellDef mat-header-cell i18n="Barcode">Barcode</th>
       <td *matCellDef="let element" mat-cell>{{ element.barcode }}</td>
     </ng-container>
 
@@ -59,7 +59,7 @@
           mat-button
           type="button">
           <mat-icon class="mr-2">add_shopping_cart</mat-icon>
-          <span>Supply</span>
+          <span i18n="Supply">Supply</span>
         </button>
       </td>
     </ng-container>

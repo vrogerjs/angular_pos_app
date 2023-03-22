@@ -1,14 +1,14 @@
 <div class="container-fluid p-3">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <div class="d-flex align-items-center">
-      <h1 class="m-0">Products</h1>
+      <h1 class="m-0" i18n="Products">Products</h1>
       <button
         class="mx-3"
         routerLink="/products/add"
         mat-button
         color="primary">
         <mat-icon class="mr-2">add</mat-icon>
-        <span>Add product</span>
+        <span i18n="Add product">Add product</span>
       </button>
     </div>
   </div>
@@ -40,9 +40,7 @@
     <div
       class="no-data"
       *ngIf="vm.data.length === 0 && vm.loaded && !vm.error"
-      @fadeIn>
-      No data found!
-    </div>
+      @fadeIn i18n="No data found">No data found!</div>
 
     <div class="error" *ngIf="vm.error">
       {{ vm.error }}

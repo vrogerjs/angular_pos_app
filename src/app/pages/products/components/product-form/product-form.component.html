@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-2">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Name</mat-label>
+        <mat-label i18n="Name">Name</mat-label>
         <input
           type="text"
           matInput
@@ -13,7 +13,7 @@
 
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-2">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Price</mat-label>
+        <mat-label i18n="Price">Price</mat-label>
         <input
           type="number"
           matInput
@@ -24,7 +24,7 @@
 
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-2">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Barcode</mat-label>
+        <mat-label i18n="Barcode">Barcode</mat-label>
         <input
           type="text"
           matInput
@@ -35,7 +35,7 @@
 
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-2">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Category</mat-label>
+        <mat-label i18n="Category">Category</mat-label>
         <mat-select formControlName="category_id">
           <mat-option></mat-option>
           <mat-option *ngFor="let category of categories" [value]="category.id">
@@ -47,19 +47,20 @@
 
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-2">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Stock Type</mat-label>
+        <mat-label i18n="Stock type">Stock type</mat-label>
         <mat-select formControlName="stock_type">
           <mat-option></mat-option>
-          <mat-option value="l">L</mat-option>
           <mat-option value="kg">Kg</mat-option>
-          <mat-option value="pcs">Piece</mat-option>
+          <mat-option value="l">L</mat-option>
+          <mat-option value="unidades">Unidades</mat-option>
+          <mat-option value="glb">Global</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
 
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-2">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Low stock</mat-label>
+        <mat-label i18n="Low stock">Low stock</mat-label>
         <input
           type="number"
           matInput
@@ -70,7 +71,7 @@
 
     <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-2">
       <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Optimal stock</mat-label>
+        <mat-label i18n="Optimal stock">Optimal stock</mat-label>
         <input
           type="number"
           matInput
@@ -81,8 +82,8 @@
 
     <div class="col-12" *ngIf="!readonly">
       <button mat-raised-button color="primary">
-        <mat-icon class="mr-2">save</mat-icon>
-        <span>Save product</span>
+        <mat-icon class="mr-2" i18n="save">save</mat-icon>
+        <span i18n="Save product">Save product</span>
       </button>
     </div>
   </div>

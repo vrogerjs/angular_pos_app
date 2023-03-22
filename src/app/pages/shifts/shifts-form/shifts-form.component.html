@@ -1,22 +1,20 @@
 <h1 mat-dialog-title>
-  <span *ngIf="data.type === 'add'">Add</span>
-  <span *ngIf="data.type === 'edit'">Edit</span>
-  Shift
-</h1>
+  <span *ngIf="data.type === 'add'" i18n>Add</span>
+  <span *ngIf="data.type === 'edit'" i18n>Edit</span></h1>
 <div mat-dialog-content>
   <form [formGroup]="form">
     <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
-      <input formControlName="name" matInput placeholder="First turn" />
+      <mat-label i18n>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Primer Turno" />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Start time</mat-label>
+      <mat-label i18n>Start time</mat-label>
       <input formControlName="start_time" type="time" matInput />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>End time</mat-label>
+      <mat-label i18n>End time</mat-label>
       <input formControlName="end_time" type="time" matInput />
     </mat-form-field>
 
@@ -27,12 +25,8 @@
         [mat-dialog-close]="form.value"
         mat-flat-button
         color="primary"
-        type="submit">
-        Save
-      </button>
-      <button mat-button color="warn" type="button" mat-dialog-close>
-        Cancel
-      </button>
+        type="submit" i18n>Save</button>
+      <button mat-button color="warn" type="button" mat-dialog-close i18n>Cancel</button>
     </div>
   </form>
 </div>

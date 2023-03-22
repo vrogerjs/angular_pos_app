@@ -5,14 +5,14 @@
         <button class="mr-2" routerLink="/products" mat-icon-button>
           <mat-icon>arrow_back</mat-icon>
         </button>
-        <h1 class="m-0">Product details</h1>
+        <h1 class="m-0" i18n="Product details">Product details</h1>
       </div>
       <button
         [routerLink]="['/products/edit', product.id]"
         mat-button
         color="primary">
         <mat-icon class="mr-2">edit</mat-icon>
-        <span>Edit product</span>
+        <span i18n="Edit product">Edit product</span>
       </button>
     </div>
 

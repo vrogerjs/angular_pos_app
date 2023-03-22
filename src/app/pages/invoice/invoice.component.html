@@ -1,15 +1,15 @@
 <div class="container p-3">
   <div class="d-flex justify-content-between align-items-center mb-3">
     <div class="d-flex align-items-center">
-      <h1 class="m-0">Invoices</h1>
+      <h1 class="m-0" i18n="Invoices">Invoices</h1>
       <button
         class="mx-3"
         (click)="resetInvoice()"
         routerLink="/invoice/create"
         mat-button
         color="primary">
-        <mat-icon class="mr-2">add</mat-icon>
-        <span>Create invoice</span>
+        <mat-icon class="mr-2" i18n="add">add</mat-icon>
+        <span i18n="Create invoice">Create invoice</span>
       </button>
     </div>
   </div>
@@ -41,9 +41,7 @@
       (invoiceClicked)="editInvoice($event)">
     </app-invoice-table>
 
-    <div class="no-data" *ngIf="data.data.length === 0" @fadeIn>
-      No data found!
-    </div>
+    <div class="no-data" *ngIf="data.data.length === 0" @fadeIn i18n="No data found">No data found!</div>
   </div>
 
   <ng-template #loading>

@@ -6,7 +6,7 @@
     </ng-container>
 
     <ng-container matColumnDef="name">
-      <th *matHeaderCellDef mat-header-cell>Name</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Name</th>
       <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
     </ng-container>
 
@@ -16,14 +16,14 @@
     </ng-container>
 
     <ng-container matColumnDef="shift">
-      <th *matHeaderCellDef mat-header-cell>Shift</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Shift</th>
       <td *matCellDef="let element" mat-cell>
         {{ element.user_shift?.shift.name }}
       </td>
     </ng-container>
 
     <ng-container matColumnDef="role">
-      <th *matHeaderCellDef mat-header-cell>Role</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Role</th>
       <td *matCellDef="let element" mat-cell>{{ element.role }}</td>
     </ng-container>
     <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>

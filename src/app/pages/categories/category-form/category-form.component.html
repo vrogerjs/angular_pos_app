@@ -1,17 +1,16 @@
 <h1 mat-dialog-title>
-  <span *ngIf="data.type === 'add'">Add</span>
-  <span *ngIf="data.type === 'edit'">Edit</span>
-  Category
+  <span *ngIf="data.type === 'add'" i18n>Add</span>
+  <span *ngIf="data.type === 'edit'" i18n>Edit</span>
 </h1>
 <div mat-dialog-content>
   <form [formGroup]="form">
     <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
-      <input formControlName="name" matInput placeholder="Cold" />
+      <mat-label i18n>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Categoria" />
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Icon</mat-label>
+      <mat-label i18n>Icon</mat-label>
       <input formControlName="icon" type="text" matInput />
     </mat-form-field>
 
@@ -21,7 +20,7 @@
     </mat-form-field>
 
     <ng-container *ngIf="form.get('name')?.value !== ''">
-      <h3>Preview:</h3>
+      <h3 i18n>Preview:</h3>
 
       <button [style.color]="form.get('color')?.value" mat-button type="button">
         <mat-icon class="mr-2" *ngIf="form.get('icon')?.value !== ''">
@@ -39,9 +38,7 @@
         [mat-dialog-close]="form.value"
         mat-flat-button
         color="primary"
-        type="submit">
-        Save
-      </button>
+        type="submit" i18n>Save</button>
       <button mat-button color="warn" type="button" mat-dialog-close>
         Cancel
       </button>

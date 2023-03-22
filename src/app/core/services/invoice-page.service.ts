@@ -13,6 +13,7 @@ export interface InvoiceProduct {
 }
 
 export interface InvoicePageState {
+
   invoiceDetails: Invoice | null;
   activeCategoryId: number | null;
   invoiceProducts: InvoiceProduct[];
@@ -28,6 +29,7 @@ export const initialState: InvoicePageState = {
 
 @Injectable({ providedIn: 'root' })
 export class InvoicePageService {
+
   private invoiceState = new BehaviorSubject<InvoicePageState>(initialState);
   state$ = this.invoiceState.asObservable().pipe(distinctUntilChanged());
 
@@ -55,6 +57,17 @@ export class InvoicePageService {
     }
 
     console.log(this.state.activeCategoryId);
+  }
+
+  changeInvoice(invoice:any) {
+    var me=this;
+    this.invoiceState.next({
+      ...this.state,
+      invoiceDetails:{
+        ...me.state.invoiceDetails,
+        ...invoice
+      }
+    });
   }
 
   addInvoiceProduct(product: ProductDetails): void {
@@ -126,6 +139,7 @@ export class InvoicePageService {
 
   // will be used to populate the state when we need to update an invoice
   editInvoice(invoice: Invoice): void {
+    console.log('invoiceee', invoice);
     this.invoiceState.next({
       invoiceDetails: invoice,
       loading: false,
@@ -139,9 +153,12 @@ export class InvoicePageService {
     });
   }
 
-  createInvoice(): void {
+  createInvoice(invoice:any): void {
+
     this.invoiceState.next({ ...this.state, loading: true });
+
     const payload = {
+      ...invoice,
       items: this.state.invoiceProducts.map(item => {
         return {
           quantity: item.count,
@@ -161,8 +178,12 @@ export class InvoicePageService {
       });
   }
 
-  updateInvoice(): void {
+  updateInvoice(invoice:any): void {
+    console.log(this.state.invoiceDetails);
+
     const payload = {
+      ...this.state.invoiceDetails,
+      ...invoice,
       items: this.state.invoiceProducts.map(item => {
         return {
           quantity: item.count,
@@ -171,7 +192,7 @@ export class InvoicePageService {
         };
       }),
     };
-
+    console.log(payload);
     const path = `${this.api}/updateInvoice/${this.state.invoiceDetails?.id}`;
     this.http
       .post(path, payload)

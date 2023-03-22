@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Name</mat-label>
+            <mat-label i18n="Name">Name</mat-label>
             <input
               matInput
               placeholder="Name"
@@ -15,7 +15,7 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Barcode</mat-label>
+            <mat-label i18n="Barcode">Barcode</mat-label>
             <input
               matInput
               placeholder="E.g. John"
@@ -25,7 +25,7 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Category</mat-label>
+            <mat-label i18n="Category">Category</mat-label>
             <mat-select formControlName="categoryId">
               <mat-option></mat-option>
               <mat-option
@@ -38,11 +38,11 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Has low stock</mat-label>
+            <mat-label i18n="Has low stock">Has low stock</mat-label>
             <mat-select placeholder="Has Stock" formControlName="hasLowStock">
               <mat-option></mat-option>
-              <mat-option [value]="true">True</mat-option>
-              <mat-option [value]="false">False</mat-option>
+              <mat-option [value]="true" i18n="True">True</mat-option>
+              <mat-option [value]="false" i18n="False">False</mat-option>
             </mat-select>
           </mat-form-field>
         </div>
@@ -50,16 +50,12 @@
 
       <div class="row">
         <div class="col">
-          <button class="mr-2" mat-raised-button color="primary" type="submit">
-            Filter products
-          </button>
+          <button class="mr-2" mat-raised-button color="primary" type="submit" i18n="Filter products">Filter products</button>
           <button
             (click)="form.reset(); onSubmit()"
             mat-button
             color="warn"
-            type="button">
-            Reset form
-          </button>
+            type="button" i18n="Reset form">Reset form</button>
         </div>
       </div>
     </mat-card-content>

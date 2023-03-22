@@ -8,7 +8,7 @@
           <p>{{ invoiceDetails.user.created_at | date: 'd/M/y hh:mm' }}</p>
         </div>
         <div class="invoice-header">
-          <h1 style="font-weight: bold">FATURË</h1>
+          <h1 style="font-weight: bold" i18n>FATURË</h1>
           <!--          <p style="margin-bottom: 5px !important;">{{ data.invoiceNumber }}</p>-->
         </div>
         <div class="item-box">
@@ -22,7 +22,7 @@
               <p style="margin-top: -5px !important">{{ item.product.name }}</p>
             </div>
             <div>
-              <p>{{ item.total }} ALL</p>
+              <p i18n>{{ item.total }} ALL</p>
             </div>
           </div>
         </div>
@@ -35,9 +35,7 @@
                 margin-bottom: 10px !important;
                 margin-left: 5px !important;
                 transform: scale(1, 2.5);
-              ">
-              TOTALI LEK
-            </p>
+              " i18n>TOTALI LEK</p>
           </div>
           <div class="numbers-column">
             <p
@@ -88,7 +86,7 @@
             </div>
           </div>
           <div>
-            <span style="font-size: 11px !important">Fature nga AmigPos</span>
+            <span style="font-size: 11px !important" i18n>Fature nga AmigPos</span>
           </div>
         </div>
       </div>

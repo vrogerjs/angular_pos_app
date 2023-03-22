@@ -2,19 +2,19 @@
   <table [dataSource]="dataSource" mat-table>
     <!-- Position Column -->
     <ng-container matColumnDef="name">
-      <th *matHeaderCellDef mat-header-cell>Name</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Name</th>
       <td *matCellDef="let element" mat-cell>{{ element.name }}</td>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="minimumStock">
-      <th *matHeaderCellDef mat-header-cell>Minimum Stock</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Minimum Stock</th>
       <td *matCellDef="let element" mat-cell>{{ element.low_stock }}</td>
     </ng-container>
 
     <!-- Weight Column -->
     <ng-container matColumnDef="stock">
-      <th *matHeaderCellDef mat-header-cell>Current Stock</th>
+      <th *matHeaderCellDef mat-header-cell i18n>Current Stock</th>
       <td *matCellDef="let element" mat-cell>
         {{ element.stock.quantity }}
         (
