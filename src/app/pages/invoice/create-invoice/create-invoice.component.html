@@ -8,7 +8,7 @@
 
     <div class="col-12 my-2" *ngIf="vm.invoiceDetails">
       <div class="invoice-details">
-        <span i18n="User">User: {{ vm.invoiceDetails.user.name }}</span>
+        <span >Usuarios: {{ vm.invoiceDetails.user.name }}</span>
         <span i18n="Paid"
           >Paid: {{ vm.invoiceDetails.is_paid === 1 ? "Yes" : "No" }}</span
         >
@@ -107,7 +107,6 @@
         </div>
       </div>
       <div class="col-12" *ngIf="vm.invoiceDetails">
-        {{vm.invoiceDetails.details}}
         <mat-form-field class="example-full-width" >
           <mat-label>Detalles</mat-label>
           <textarea
@@ -127,18 +126,19 @@
       >
       </app-create-invoice-table>
       <br>
+
       <div
         class="d-flex justify-content-between"
         *ngIf="vm.invoiceProducts.length > 0"
       >
         <button
-          *ngIf="vm.invoiceDetails === null"
+          *ngIf="!vm.invoiceDetails?.id"
           (click)="createInvoice()"
           mat-flat-button
           color="primary"
         >
           <mat-icon class="mr-2">shopping_cart</mat-icon>
-          <span i18n="Create invoice">Create invoice</span>
+          <span i18n>Create invoice</span>
         </button>
         <button
           *ngIf="vm.invoiceDetails !== null && vm.invoiceDetails?.is_paid === 0"
@@ -156,7 +156,7 @@
           color="accent"
         >
           <mat-icon class="mr-2">point_of_sale</mat-icon>
-          <span i18n="Pay now">Pay now</span>
+          <span i18n>Pay now</span>
         </button>
         <button
           *ngIf="vm.invoiceDetails !== null"
@@ -165,7 +165,7 @@
           color="primary"
         >
           <mat-icon class="mr-2" i18n="print">print</mat-icon>
-          <span i18n="Print invoice">Print invoice</span>
+          <span i18n>Print invoice</span>
         </button>
       </div>
     </div>

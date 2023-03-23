@@ -7,12 +7,10 @@
           <mat-label>Email</mat-label>
           <input formControlName="email" matInput />
           <mat-icon matSuffix>person_outline</mat-icon>
-          <mat-error *ngIf="form.get('email')?.invalid">
-            Email is not correct!
-          </mat-error>
+          <mat-error *ngIf="form.get('email')?.invalid" i18n>Email is not correct</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
+          <mat-label i18n>Password</mat-label>
           <input
             formControlName="password"
             matInput
@@ -20,16 +18,14 @@
             autocomplete="password" />
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Confirm Password</mat-label>
+          <mat-label i18n>Confirm Password</mat-label>
           <input
             formControlName="password_confirmation"
             matInput
             type="password"
             autocomplete="password" />
         </mat-form-field>
-        <button type="submit" mat-raised-button color="primary">
-          Create Admin
-        </button>
+        <button type="submit" mat-raised-button color="primary" i18n>Create Admin</button>
       </div>
     </form>
   </div>

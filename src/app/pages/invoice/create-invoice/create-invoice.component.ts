@@ -23,7 +23,6 @@ export class CreateInvoiceComponent {
 
   code = new FormControl('');
   client = new FormControl('');
-  details = new FormControl('');
 
   public invoice: any = new FormControl({});
 
@@ -38,10 +37,9 @@ export class CreateInvoiceComponent {
     this.vm$.subscribe(
       (x: any) => {
         if (x.invoiceDetails) {
-          let { code, client, details } = x.invoiceDetails;
+          let { code, client } = x.invoiceDetails;
           me.code.setValue(code);
           me.client.setValue(client);
-          me.details.setValue(details);
         }
       },
       (err) => console.error('Observer got an error: ' + err),
@@ -50,8 +48,11 @@ export class CreateInvoiceComponent {
   }
 
   onChange(event: Event) {
-    this.invoicePageService.changeInvoice({
+    var me=this;
+    me.invoicePageService.changeInvoice({
       details: (event.target as any).value,
+      code:me.code.value,
+      client:me.client.value
     });
   }
 
@@ -105,7 +106,6 @@ export class CreateInvoiceComponent {
     });
     this.code.setValue(null);
     this.client.setValue(null);
-    this.details.setValue(null);
     this.invoicePageService.reset();
   }
 

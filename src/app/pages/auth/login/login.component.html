@@ -1,18 +1,16 @@
 <mat-card class="form-wrapper">
   <div class="p-3">
-    <h1>Login</h1>
+    <h1 i18n>Login</h1>
     <form [formGroup]="form" (ngSubmit)="submit()">
       <div class="d-inline-flex flex-column">
         <mat-form-field appearance="outline">
-          <mat-label>Email</mat-label>
+          <mat-label i18n>Email</mat-label>
           <input formControlName="email" matInput />
           <mat-icon matSuffix>person_outline</mat-icon>
-          <mat-error *ngIf="form.get('email')?.invalid">
-            Email is not correct!
-          </mat-error>
+          <mat-error *ngIf="form.get('email')?.invalid" i18n>Email is not correct</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
-          <mat-label>Password</mat-label>
+          <mat-label i18n>Password</mat-label>
           <input
             [type]="hide ? 'password' : 'text'"
             formControlName="password"
@@ -26,7 +24,7 @@
             <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
           </button>
         </mat-form-field>
-        <button type="submit" mat-raised-button color="primary">Login</button>
+        <button type="submit" mat-raised-button color="primary" i18n>Login</button>
       </div>
     </form>
   </div>

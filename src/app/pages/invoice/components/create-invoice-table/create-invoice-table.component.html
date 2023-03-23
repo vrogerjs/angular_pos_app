@@ -8,11 +8,9 @@
       <th
         *matHeaderCellDef
         mat-header-cell
-        i18n="Name"
+        i18n
         style="vertical-align: middle; text-align: center"
-      >
-        Name
-      </th>
+      >Name</th>
       <td *matCellDef="let element" mat-cell style="vertical-align: middle;">{{ element.product.name }}</td>
       <td *matFooterCellDef mat-footer-cell></td>
     </ng-container>
@@ -23,9 +21,7 @@
         mat-header-cell
         i18n
         style="vertical-align: middle; text-align: center"
-      >
-        Price
-      </th>
+      >Price</th>
       <td *matCellDef="let element" mat-cell style="vertical-align: middle;">
         {{ element.product.price }} Soles
       </td>
@@ -38,9 +34,7 @@
         mat-header-cell
         i18n
         style="vertical-align: middle; text-align: center"
-      >
-        Count
-      </th>
+      >Count</th>
       <td *matCellDef="let element" mat-cell style="min-width: 80px">
         <div
           class="d-flex align-items-center"
@@ -96,16 +90,14 @@
         mat-header-cell
         i18n
         style="vertical-align: middle; text-align: center"
-      >Remove
-      </th>
+      >Remove</th>
       <td *matCellDef="let element" mat-cell style="vertical-align: middle;">
         <button
           (click)="removed.emit(element.product.id)"
           mat-raised-button
           color="warn"
           i18n
-        >Remove
-        </button>
+        >Remove</button>
       </td>
       <td *matFooterCellDef mat-footer-cell></td>
     </ng-container>

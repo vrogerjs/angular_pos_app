@@ -21,7 +21,7 @@ export interface InvoicePageState {
 }
 
 export const initialState: InvoicePageState = {
-  invoiceDetails: null,
+  invoiceDetails:{details:'',user:{}} as Invoice,
   activeCategoryId: null,
   invoiceProducts: [],
   loading: false,
@@ -158,6 +158,7 @@ export class InvoicePageService {
     this.invoiceState.next({ ...this.state, loading: true });
 
     const payload = {
+      ...this.state.invoiceDetails,
       ...invoice,
       items: this.state.invoiceProducts.map(item => {
         return {

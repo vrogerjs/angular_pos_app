@@ -24,9 +24,7 @@
     <mat-card class="full-height">
       <mat-card-content style="min-height: 200px">
         <h2 class="text-center m-0" i18n>Most sold products</h2>
-        <app-items-chart
-          *ngIf="data.productSales"
-          [data]="data.productSales">
+        <app-items-chart *ngIf="data.productSales" [data]="data.productSales">
         </app-items-chart>
         <div class="flex-center" *ngIf="loading">
           <mat-spinner></mat-spinner>
@@ -43,7 +41,8 @@
         <h2 class="text-center" i18n>Sales by category</h2>
         <app-categories-chart
           *ngIf="data.salesByCategory"
-          [data]="data.salesByCategory">
+          [data]="data.salesByCategory"
+        >
         </app-categories-chart>
         <div class="flex-center" *ngIf="loading">
           <mat-spinner></mat-spinner>
@@ -51,7 +50,6 @@
       </mat-card-content>
     </mat-card>
   </div>
-
   <!-- <div class="col-md-8">
     <mat-card class="full-height">
       <mat-card-content>
