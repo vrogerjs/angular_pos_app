@@ -1,15 +1,16 @@
 import { Routes } from '@angular/router';
 import { AuthGuard } from '@core/guards/auth.guard';
 import { RoleGuard } from '@core/guards/role.guard';
+import { NonAuthGuard } from '@core/guards/non-auth.guard';
 
 export const routes: Routes = [
   {
     path: '',
-   //canActivate: [NonAuthGuard],
+   canActivate: [NonAuthGuard],
     children: [
       {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'auth',
         pathMatch: 'full',
       },
       {

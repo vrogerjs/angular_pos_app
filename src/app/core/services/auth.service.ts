@@ -71,7 +71,7 @@ export class AuthService {
       tap(data => {
         this.auth.next(data);
         localStorage.setItem('auth', JSON.stringify(data));
-        this.router.navigateByUrl('/dashboard').then();
+        this.router.navigateByUrl('/dashboard');
       })
     );
   }
@@ -94,7 +94,7 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('auth');
     this.auth.next(initialState);
-    this.router.navigateByUrl('auth/login').then();
+    this.router.navigateByUrl('auth/login');
   }
 
   changeProfilePhoto(photo: any): Observable<any> {
